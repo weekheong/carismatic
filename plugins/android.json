@@ -12,6 +12,9 @@
         },
         "phonegap-plugin-push": {
             "PACKAGE_NAME": "com.carismatic.carwash"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.carismatic.carwash"
         }
     },
     "dependent_plugins": {}

@@ -19,7 +19,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.2.0",
-    "phonegap-plugin-push": "1.2.3"
+    "phonegap-plugin-push": "1.2.3",
+    "cordova-plugin-geolocation": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

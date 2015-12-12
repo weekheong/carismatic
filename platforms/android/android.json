@@ -60,6 +60,16 @@
                             "xml": "<service android:name=\"com.adobe.phonegap.push.GCMIntentService\" />",
                             "count": 1
                         }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -70,6 +80,9 @@
             "PACKAGE_NAME": "com.carismatic.carwash"
         },
         "phonegap-plugin-push": {
+            "PACKAGE_NAME": "com.carismatic.carwash"
+        },
+        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.carismatic.carwash"
         }
     },
@@ -92,6 +105,7 @@
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.0",
-        "phonegap-plugin-push": "1.2.3"
+        "phonegap-plugin-push": "1.2.3",
+        "cordova-plugin-geolocation": "1.0.1"
     }
 }

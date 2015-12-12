@@ -32,7 +32,14 @@ var app = {
         app.receivedEvent();
     },
     receivedEvent: function(id) {
-	
+		
+		var userid = window.localStorage.getItem("userid");
+		if(userid)
+		{
+			$('#dashboard').addClass('ui-page-active');
+			$('#home').removeClass('ui-page-active');
+		}
+		
 		$('div#home_content').load("http://42.61.224.110:8080/carismatic/index.php/action/load_homepage",function(){
 			
 		});
