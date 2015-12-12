@@ -32,7 +32,12 @@ var app = {
         app.receivedEvent();
     },
     receivedEvent: function(id) {
-        $('button#signup').click(function(e){
+	
+		$('div#home_content').load("http://42.61.224.110:8080/carismatic/index.php/action/load_homepage",function(){
+			
+		});
+		
+        $('button#btnsignup').click(function(e){
 			try{
 				$.post("http://42.61.224.110:8080/carismatic/index.php/action/adduser",{
 				username:$('#signup_username').val(),
@@ -46,7 +51,22 @@ var app = {
 						window.history.back();
 					}
 				});
-				$('div#home_content').load("http://42.61.224.110:8080/carismatic/index.php/action/load_homepage");
+			}
+			catch(e)
+			{
+				alert(e.message);
+			}
+			
+		});
+		
+		$('button#btnlogin').click(function(e){
+			try{
+				$.post("http://42.61.224.110:8080/carismatic/index.php/action/login",{
+				username:$('#login_username').val(),
+				password:$('#login_password').val()
+				},function(request){
+					$('#login_script').html(request);
+				});
 			}
 			catch(e)
 			{
