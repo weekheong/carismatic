@@ -40,6 +40,12 @@ var app = {
 			$('#home').removeClass('ui-page-active');
 		}
 		
+		$('#logout').click(function(e){
+			window.localStorage.clear();
+			$('#home').addClass('ui-page-active');
+			$('#dashboard').removeClass('ui-page-active');
+		});
+		
 		$('div#home_content').load("http://42.61.224.110:8080/carismatic/index.php/action/load_homepage",function(){
 			
 		});
