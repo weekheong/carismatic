@@ -69,7 +69,6 @@
 
 			</div>
 			<div class="ui-content" role="main">
-				<form method="post" action="http://42.61.224.110:8080/carismatic/index.php/action/adduser">
 				<div class="ui-field-contain">
 					<label for="signup_username">Username:</label>
 					
@@ -91,16 +90,15 @@
 				<div class="ui-field-contain">
 					<label for="signup_accounttype" class="select">I am a:</label>
 					
-					<select name="select-choice-1" id="signup_accounttype" data-native-menu="false" tabindex="-1">
+					<select name="signup_accounttype" id="signup_accounttype" data-native-menu="false" tabindex="-1">
 						<option value="car_washer">Car Washer</option>
 						<option value="car_owner">Car Owner</option>
 					</select>
 					
 				</div>
 				
-				<button class="ui-shadow ui-btn ui-corner-all" type="submit">Sign Up</button>
+				<button class="ui-shadow ui-btn ui-corner-all" id="signup">Sign Up</button>
 
-				</form>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed slideup ui-panel-fixed-toolbar">

@@ -28,16 +28,11 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent();
     },
-    // Update DOM on a Received Event
     receivedEvent: function(id) {
-        if('button#signup').click(function(e){
+        $('button#signup').click(function(e){
 			$.post("http://42.61.224.110:8080/carismatic/index.php/action/adduser",{username:$('#signup_username').val(),password:$('#signup_password').val(),email:$('#signup_email').val(),rights:$('#signup_accounttype').val()},function(request){
 				alert(request);
 			});
