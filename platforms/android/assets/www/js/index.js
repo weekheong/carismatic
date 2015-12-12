@@ -41,6 +41,10 @@ var app = {
 			email:$('#signup_email').val(),
 			rights:$('#signup_accounttype').val()},function(request){
 				alert(request);
+				if((request.indexOf('sign in') > -1))
+				{
+					window.history.back();
+				}
 			});
 			}
 			catch(e)
