@@ -70,7 +70,7 @@ var app = {
 			// Options: throw an error if no update is received every 30 seconds.
 			//
 			try{
-				var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+				var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 0, timeout: 30000, enableHighAccuracy:true });
 			}
 			catch(e)
 			{
