@@ -47,10 +47,13 @@ var app = {
 						element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
 											'Longitude: ' + position.coords.longitude     + '<br />' +
 											'<hr />'      + element.innerHTML;
+					userid = window.localStorage.getItem("userid");
 					if(userid)
 					{
 						$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
-							alert(request);
+							if(request){
+								alert(request);
+							}
 						});
 					}
 				}
