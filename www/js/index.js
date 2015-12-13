@@ -42,15 +42,21 @@ var app = {
 		
 		$('#btnShareLocation').click(function(e){
 			function onSuccess(position) {
-				var element = document.getElementById('geolocation');
-					element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-										'Longitude: ' + position.coords.longitude     + '<br />' +
-										'<hr />'      + element.innerHTML;
-				if(userid)
+				try{
+					var element = document.getElementById('geolocation');
+						element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+											'Longitude: ' + position.coords.longitude     + '<br />' +
+											'<hr />'      + element.innerHTML;
+					if(userid)
+					{
+						$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,position:position},function(request){
+							alert(request);
+						});
+					}
+				}
+				catch (e)
 				{
-					$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,position:position},function(request){
-						alert(request);
-					});
+					alert(e.message);
 				}
 			}
 
@@ -63,7 +69,13 @@ var app = {
 
 			// Options: throw an error if no update is received every 30 seconds.
 			//
-			var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+			try{
+				var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+			}
+			catch(e)
+			{
+				alert(e.message);
+			}
 		});
 		
 		$('#logout').click(function(e){
