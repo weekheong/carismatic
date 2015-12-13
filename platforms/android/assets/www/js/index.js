@@ -49,7 +49,7 @@ var app = {
 											'<hr />'      + element.innerHTML;
 					if(userid)
 					{
-						$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,position:position},function(request){
+						$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
 							alert(request);
 						});
 					}
