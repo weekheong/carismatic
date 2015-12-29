@@ -37,10 +37,12 @@ var app = {
 		if(userid)
 		{
 			$('#dashboard').addClass('ui-page-active');
+			$('#home').removeClass('ui-page-active');
 		}
 		else
 		{
 			$('#home').addClass('ui-page-active');
+			$('#dashboard').removeClass('ui-page-active');
 		}
 		
 		$('#btnShareLocation').click(function(e){
