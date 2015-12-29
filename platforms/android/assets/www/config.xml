@@ -2,7 +2,7 @@
 <widget id="com.carismatic.carwash" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Carismatic</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        An application that connects car owners to car washers.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
