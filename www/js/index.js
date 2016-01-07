@@ -16,10 +16,15 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var ipaddress = "http://42.61.224.110:8080/carismatic";
 var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+		$('div.ui-loader').remove();
+		$(document).on('pageshow', '[data-role="page"]',function(e,data){   
+			$('.bg-gradient').height($(window).height()); 
+		});
     },
     // Bind Event Listeners
     //
@@ -56,7 +61,7 @@ var app = {
 					
 					if(userid)
 					{
-						$.post('http://42.61.224.110:8080/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
+						$.post(ipaddress+'/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
 							if(request){
 								alert(request);
 							}
@@ -93,13 +98,13 @@ var app = {
 			$('#dashboard').removeClass('ui-page-active');
 		});
 		
-		$('div#home_content').load("http://42.61.224.110:8080/carismatic/index.php/action/load_homepage",function(){
+		$('div#home_content').load(ipaddress+"/index.php/action/load_homepage",function(){
 			
 		});
 		
         $('button#btnsignup').click(function(e){
 			try{
-				$.post("http://42.61.224.110:8080/carismatic/index.php/action/adduser",{
+				$.post(ipaddress+"/index.php/action/adduser",{
 				username:$('#signup_username').val(),
 				password:$('#signup_password').val(),
 				repassword:$('#signup_repassword').val(),
@@ -121,7 +126,7 @@ var app = {
 		
 		$('button#btnlogin').click(function(e){
 			try{
-				$.post("http://42.61.224.110:8080/carismatic/index.php/action/login",{
+				$.post(ipaddress+"/index.php/action/login",{
 				username:$('#login_username').val(),
 				password:$('#login_password').val()
 				},function(request){
@@ -136,5 +141,7 @@ var app = {
 		});
     }
 };
+
+
 
 app.initialize();

@@ -60,15 +60,12 @@ display:block;
     font-weight: 400;
 }
 
-.ui-header.ui-bar-inherit{    background-color: #151d31;background: #151d31;
-    color: white;}
+
 
 	.ui-select > a{margin-top:20px;}	
 	
-	
-	
-	
-	
+	.ui-header.ui-bar-inherit.signupheader{border:0;background:transparent;
+    color: white;}
 	
 	
 	
