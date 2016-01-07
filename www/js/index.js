@@ -51,7 +51,7 @@ var app = {
 		}
 		
 		$('#btnFindPeople').click(function(e){
-			$.post(ipaddress+'/carismatic/index.php/action/findpeople',{numMeters:$('#numMeters').val()},function(request){
+			$.post(ipaddress+'/index.php/action/findpeople',{numMeters:$('#numMeters').val()},function(request){
 							if(request){
 								
 								var element = document.getElementById('geolocation2');
@@ -71,7 +71,7 @@ var app = {
 					
 					if(userid)
 					{
-						$.post(ipaddress+'/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
+						$.post(ipaddress+'/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
 							if(request){
 								
 								var element = document.getElementById('geolocation');
