@@ -51,6 +51,7 @@
 				<div id="home_content">
 				
 				</div>
+				<form>
 				<div class="ui-field-contain">
 					<label for="login_username">Username:</label>
 					
@@ -61,7 +62,8 @@
 					<label for="login_password">Password:</label>
 					<input type="password" name="login_password" id="login_password" value="" data-clear-btn="true">
 				</div>
-				<button class="ui-shadow ui-btn ui-corner-all" id="btnlogin">Log In</button>
+				<button type="submit" class="ui-shadow ui-btn ui-corner-all" id="btnlogin">Log In</button>
+				</form>
 				<div id="login_script"></div>
 				<a target="_blank" href="#signup" style="text-decoration: none" class="link-upper">Don't have an account? <strong class="b-link">Sign Up</strong></a>
 			</div>
@@ -79,6 +81,7 @@
 
 			</div>
 			<div class="ui-content" role="main">
+			
 				<div class="ui-field-contain">
 					<label for="signup_username">Username:</label>
 					
@@ -126,8 +129,12 @@
 				<a href="#" class="ui-btn-right ui-btn ui-icon-gear ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button" id="logout">Log Out</a>
 			</div>
 			<div class="ui-content" role="main">
+				<p>Please make sure you turn on your location before you update your location</p>
 				<p id="geolocation"></p>
-				<button class="ui-shadow ui-btn ui-corner-all" id="btnShareLocation">Share my Location</button>
+				<button class="ui-shadow ui-btn ui-corner-all" id="btnShareLocation">Update my Location</button>
+				Find people: <input type="number" id="numMeters"/> meters
+				<button class="ui-shadow ui-btn ui-corner-all" id="btnFindPeople">Find people near me</button>
+				<p id="geolocation2"></p>
 			</div>
 		</div>
 	</div>

@@ -50,20 +50,32 @@ var app = {
 			$('#dashboard').removeClass('ui-page-active');
 		}
 		
+		$('#btnFindPeople').click(function(e){
+			$.post(ipaddress+'/carismatic/index.php/action/findpeople',{numMeters:$('#numMeters').val()},function(request){
+							if(request){
+								
+								var element = document.getElementById('geolocation2');
+								element.innerHTML = request;
+							}
+						});
+		});
+		
 		$('#btnShareLocation').click(function(e){
 			function onSuccess(position) {
 				try{
-					var element = document.getElementById('geolocation');
-						element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-											'Longitude: ' + position.coords.longitude     + '<br />' +
-											'<hr />'      + element.innerHTML;
+					//var element = document.getElementById('geolocation');
+						//element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+											//'Longitude: ' + position.coords.longitude     + '<br />' +
+											//'<hr />'      + element.innerHTML;
 					userid = window.localStorage.getItem("userid");
 					
 					if(userid)
 					{
 						$.post(ipaddress+'/carismatic/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
 							if(request){
-								alert(request);
+								
+								var element = document.getElementById('geolocation');
+								element.innerHTML = request;
 							}
 						});
 					}
