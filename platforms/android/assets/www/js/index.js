@@ -51,13 +51,19 @@ var app = {
 		}
 		
 		$('#btnFindPeople').click(function(e){
-			$.post(ipaddress+'/index.php/action/findpeople',{numMeters:$('#numMeters').val()},function(request){
-							if(request){
-								
-								var element = document.getElementById('geolocation2');
-								element.innerHTML = request;
-							}
-						});
+		
+			userid = window.localStorage.getItem("userid");
+			
+			if(userid)
+			{
+				$.post(ipaddress+'/index.php/action/findpeople',{numMeters:$('#numMeters').val(),userid:userid},function(request){
+					if(request){
+						
+						var element = document.getElementById('geolocation2');
+						element.innerHTML = request;
+					}
+				});
+			}
 		});
 		
 		$('#btnShareLocation').click(function(e){
