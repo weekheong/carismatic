@@ -83,5 +83,5 @@ background-image: -webkit-linear-gradient(107deg,#4c68b1,black 82%);
 .info{color:#FFF!important;text-shadow:none;text-align:center;}
 .ui-panel-wrapper{background:#F9F9F9;background-color:#F9F9F9;}
 .menubtn,
-.dashheader.info{background-color: #151d31;
+.dashheader.info{background-color: #151d31;background: #151d31;border:0;
 }

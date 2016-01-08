@@ -132,7 +132,7 @@ var app = {
 			window.localStorage.clear();
 			//$('#home').addClass('ui-page-active');
 			//$('#dashboard').removeClass('ui-page-active');
-			$( document ).off( "pagebeforeshow", "**" );
+			$(document).off( 'pagebeforeshow' );
 			$.mobile.pageContainer.pagecontainer("change", "#home", { reverse:false,changeHash:false });
 		});
 		
