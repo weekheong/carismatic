@@ -66,9 +66,9 @@ var app = {
 			}
 		});
 		
-		$('#logo-login').click(function(e){
+		/*$('#logo-login').click(function(e){
 			window.location.href="#dashboard";
-		});//backdoor
+		});*///backdoor
 		
 		$('#btnShareLocation').click(function(e){
 			function onSuccess(position) {
@@ -138,6 +138,7 @@ var app = {
 		});
 		
 		$('a.menubtn').click(function(e){
+			e.preventDefault();
 			e.stopPropagation();
 			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
 			$(document).click(function(e){$('#mypanel').fadeOut();});
