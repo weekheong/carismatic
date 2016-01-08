@@ -46,7 +46,7 @@
 			<a href="#" class="ui-btn-right ui-btn ui-icon-gear ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button">Button</a>
 
 			</div>-->
-		<div class="logo-login"></div>
+		<div class="logo-login" id="logo-login"></div>
 			<div class="ui-content" role="main">
 				<div id="home_content">
 				
@@ -117,16 +117,29 @@
 	</div>
 
 
-	
 
 
 	<div data-role="page" id="dashboard">
-
+<div data-role="panel" id="mypanel" data-position="left" data-display="reveal">
+		<!-- panel content goes here -->
+		<div class="ui-panel-inner">
+		<div data-role="tabs">
+		    <ul data-role="listview" data-inset="true" class="tablist-left">
+		      <li><a href="#one" data-ajax="false">one</a></li>
+		      <li><a href="#two" data-ajax="false">two</a></li>
+		      <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
+		    </ul>
+		</div>
+		<a href="#" class="ui-btn-right ui-btn ui-icon-gear ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button" id="logout">Log Out</a>
+		</div>
+	</div><!-- /panel -->	
 		<div class="ui-panel-wrapper">
 			<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+				<a href="#mypanel" class="ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button">Menu</a>
+				
 				<h1 class="ui-title" role="heading" aria-level="1" style="text-shadow:none;">Carismatic</h1>
 			
-				<a href="#" class="ui-btn-right ui-btn ui-icon-gear ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button" id="logout">Log Out</a>
+				
 			</div>
 			<div class="ui-content" role="main">
 				<p>Please make sure you turn on your location before you update your location</p>
@@ -138,6 +151,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 
 
 		<script src="js/jquery-2.1.4.min.js"></script>

@@ -66,6 +66,10 @@ var app = {
 			}
 		});
 		
+		$('#logo-login').click(function(e){
+			window.location.href="#dashboard";
+		});//backdoor
+		
 		$('#btnShareLocation').click(function(e){
 			function onSuccess(position) {
 				try{
@@ -95,14 +99,14 @@ var app = {
 			// onError Callback receives a PositionError object
 			//
 			function onError(error) {
-				alert('code: '    + error.code    + '\n' +
-					  'message: ' + error.message + '\n');
+				//alert('code: '    + error.code    + '\n' +
+					  //'message: ' + error.message + '\n');
 			}
 
 			// Options: throw an error if no update is received every 30 seconds.
 			//
 			try{
-				var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 0, timeout: 30000, enableHighAccuracy:true });
+				var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 0, timeout: 30000, enableHighAccuracy:true });
 			}
 			catch(e)
 			{

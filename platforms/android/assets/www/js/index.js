@@ -66,6 +66,10 @@ var app = {
 			}
 		});
 		
+		$('#logo-login').click(function(e){
+			window.location.href="#dashboard";
+		});//backdoor
+		
 		$('#btnShareLocation').click(function(e){
 			function onSuccess(position) {
 				try{
