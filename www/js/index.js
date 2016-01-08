@@ -43,6 +43,11 @@ var app = {
 		if(userid)
 		{
 			$.mobile.pageContainer.pagecontainer("change", "#dashboard", { reverse:false,changeHash:false });
+			$(document).on('pagebeforeshow', function(e, data) {
+				if($.mobile.activePage.is('#home')){
+					$.mobile.pageContainer.pagecontainer("change", "#dashboard", { reverse:false,changeHash:false });
+				}
+			});
 			//$('#dashboard').addClass('ui-page-active');
 			//$('#home').removeClass('ui-page-active');
 		}
@@ -87,12 +92,6 @@ var app = {
 							if(request){
 								var minZoomLevel = 12;
 
-							   var map = new google.maps.Map(document.getElementById('map_canvas'), {
-								  zoom: minZoomLevel,
-								  center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-								  mapTypeId: google.maps.MapTypeId.ROADMAP
-							   });
-
 								var element = document.getElementById('geolocation');
 								element.innerHTML = request;
 							}
@@ -133,6 +132,7 @@ var app = {
 			window.localStorage.clear();
 			//$('#home').addClass('ui-page-active');
 			//$('#dashboard').removeClass('ui-page-active');
+			$( document ).off( "pagebeforeshow", "**" );
 			$.mobile.pageContainer.pagecontainer("change", "#home", { reverse:false,changeHash:false });
 		});
 		
