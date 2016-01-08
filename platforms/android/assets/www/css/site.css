@@ -82,6 +82,6 @@ background-image: -webkit-linear-gradient(107deg,#4c68b1,black 82%);
 	.menubtn,
 .info{color:#FFF!important;text-shadow:none;text-align:center;}
 .ui-panel-wrapper{background:#F9F9F9;background-color:#F9F9F9;}
-.ui-btn.menubtn,
+.ui-btn.menubtn{border:0;background-color: #fd4c58!important;background: #fd4c58!important;}
 .dashheader.info{background-color: #151d31;background: #151d31;border:0;
 }
