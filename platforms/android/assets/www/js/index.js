@@ -25,6 +25,7 @@ var app = {
 		$(document).on('pageshow', '[data-role="page"]',function(e,data){   
 			$('.bg-gradient').height($(window).height()); 
 		});
+		$.mobile.defaultPageTransition = 'none';
     },
     // Bind Event Listeners
     //
