@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
 }
 
-.bg-gradient{
+.ui-panel-wrapper.bg-gradient{
     background-color: #1f2532;
     background-image: -webkit-linear-gradient(107deg,#4c68b1,black 98%);
     background-image: linear-gradient(343deg,#4c68b1,black 98%);
@@ -81,7 +81,7 @@ background-image: -webkit-linear-gradient(107deg,#4c68b1,black 82%);
 	
 	.menubtn,
 .info{color:#FFF;text-shadow:none;text-align:center;}
-
+.ui-panel-wrapper{background:#fff;background-color:#FFF;}
 .menubtn,
 .dashheader.info{background-color: #151d31;
 }
