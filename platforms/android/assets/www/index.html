@@ -126,7 +126,7 @@
 
 		<div class="ui-panel-wrapper">
 			<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
-				<a href="#mypanel" class="ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button">Menu</a>
+				<a href="#" class="ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" data-role="button" role="button" id="menubtn">Menu</a>
 				
 				<h1 class="ui-title" role="heading" aria-level="1" style="text-shadow:none;">Carismatic</h1>
 			
@@ -141,19 +141,19 @@
 				<button class="ui-shadow ui-btn ui-corner-all" id="btnFindPeople">Find people near me</button>
 				<p id="geolocation2"></p>
 			</div>
-		</div>
-		<div data-role="panel" id="mypanel" data-position="left" data-display="reveal">
-			<!-- panel content goes here -->
-			<div class="ui-panel-inner">
-			<ul data-role="listview">
-			      <li><a href="#" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
-			      <li><a href="#" class="ui-icon-action ui-btn ui-btn-icon-left" id="logout">Log Out</a></li>
-			</ul>
-			</div>
-		</div><!-- /panel -->	
+		</div>	
 	</div>
 	
 	
+	<div id="mypanel">
+		<!-- panel content goes here -->
+		<div class="ui-panel-inner">
+		<ul data-role="listview">
+		      <li><a href="#" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+		      <li><a href="#" class="ui-icon-action ui-btn ui-btn-icon-left" id="logout">Log Out</a></li>
+		</ul>
+		</div>
+	</div><!-- /panel -->
 	
 
 

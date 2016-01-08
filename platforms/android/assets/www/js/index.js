@@ -137,6 +137,12 @@ var app = {
 			
 		});
 		
+		$('#menubtn').click(function(e){
+			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
+			$(document).click(function(e){$('#mypanel').fadeOut();});
+		});
+		
+		
         $('button#btnsignup').click(function(e){
 			try{
 				$.post(ipaddress+"/index.php/action/adduser",{
