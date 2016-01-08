@@ -132,8 +132,8 @@ var app = {
 			window.localStorage.clear();
 			//$('#home').addClass('ui-page-active');
 			//$('#dashboard').removeClass('ui-page-active');
+			 alert("You have successfully logged out");
 			 navigator.app.exitApp();
-			 alert("You have been log out");
 		});
 		
 		$('div#home_content').load(ipaddress+"/index.php/action/load_homepage",function(){
