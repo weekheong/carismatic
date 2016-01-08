@@ -79,4 +79,9 @@ background-image: -webkit-linear-gradient(107deg,#4c68b1,black 82%);
 	#listview{margin:0;display:block;width:100%;padding:0;}
 	#listview > li{margin:0;display:block;}
 	
+	.menubtn,
 .info{color:#FFF;text-shadow:none;text-align:center;}
+
+.menubtn,
+.dashheader.info{background-color: #151d31;
+}
