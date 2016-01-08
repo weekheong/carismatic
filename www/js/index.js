@@ -138,6 +138,7 @@ var app = {
 		});
 		
 		$('#menubtn').click(function(e){
+			e.stopPropagation();
 			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
 			$(document).click(function(e){$('#mypanel').fadeOut();});
 		});

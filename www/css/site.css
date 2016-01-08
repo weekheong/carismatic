@@ -70,7 +70,7 @@ display:block;
 	
 	#mypanel a.ui-btn{margin-top:0;margin-bottom:0;}
 	
-	#mypanel{display:none;position:fixed;width: 92%;
+	#mypanel{display:none;position:fixed;width: 82%;
     padding-right: 22px;
     padding-left: 22px;
 background-image: -webkit-linear-gradient(107deg,#4c68b1,black 82%);
