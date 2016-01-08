@@ -83,7 +83,14 @@ var app = {
 					{
 						$.post(ipaddress+'/index.php/action/update_position',{userid:userid,latitude:position.coords.latitude,longitude:position.coords.longitude},function(request){
 							if(request){
-								
+								var minZoomLevel = 12;
+
+							   var map = new google.maps.Map(document.getElementById('map_canvas'), {
+								  zoom: minZoomLevel,
+								  center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+								  mapTypeId: google.maps.MapTypeId.ROADMAP
+							   });
+
 								var element = document.getElementById('geolocation');
 								element.innerHTML = request;
 							}
@@ -99,14 +106,20 @@ var app = {
 			// onError Callback receives a PositionError object
 			//
 			function onError(error) {
-				alert('code: '    + error.code    + '\n' +
-					  'message: ' + error.message + '\n');
+				//alert('code: '    + error.code    + '\n' +
+					  //'message: ' + error.message + '\n');
+				if (error.code == 1)
+					alert("You must allow this website to use the Geolocation API to access your position.");
+				else if (error.code == 3)
+					alert("Unfortunately, your position request timed out.");
+				else
+					alert("Unfortunately, your position could not be determined.");
 			}
 
 			// Options: throw an error if no update is received every 30 seconds.
 			//
 			try{
-				var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { maximumAge: 0, timeout: 30000, enableHighAccuracy:true });
+				var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 0, timeout: 30000, enableHighAccuracy:true });
 			}
 			catch(e)
 			{

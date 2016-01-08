@@ -68,5 +68,7 @@ display:block;
 	.ui-header.ui-bar-inherit.signupheader{border:0;background:transparent;
     color: white;}
 	
+	#mypanel a.ui-btn{margin-top:0;margin-bottom:0;}
+	
 	
 	
