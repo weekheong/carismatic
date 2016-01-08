@@ -41,13 +41,14 @@ var app = {
 		var userid = window.localStorage.getItem("userid");
 		if(userid)
 		{
-			$('#dashboard').addClass('ui-page-active');
-			$('#home').removeClass('ui-page-active');
+			$.mobile.pageContainer.pagecontainer("change", "#dashboard", { reverse:false,changeHash:false });
+			//$('#dashboard').addClass('ui-page-active');
+			//$('#home').removeClass('ui-page-active');
 		}
 		else
 		{
-			$('#home').addClass('ui-page-active');
-			$('#dashboard').removeClass('ui-page-active');
+			//$('#home').addClass('ui-page-active');
+			//$('#dashboard').removeClass('ui-page-active');
 		}
 		
 		$('#btnFindPeople').click(function(e){
@@ -129,8 +130,9 @@ var app = {
 		
 		$('#logout').click(function(e){
 			window.localStorage.clear();
-			$('#home').addClass('ui-page-active');
-			$('#dashboard').removeClass('ui-page-active');
+			//$('#home').addClass('ui-page-active');
+			//$('#dashboard').removeClass('ui-page-active');
+			$.mobile.pageContainer.pagecontainer("change", "#home", { reverse:false,changeHash:false });
 		});
 		
 		$('div#home_content').load(ipaddress+"/index.php/action/load_homepage",function(){
