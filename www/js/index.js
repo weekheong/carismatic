@@ -141,7 +141,7 @@ var app = {
 			e.stopPropagation();
 			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
 			$(document).click(function(e){$('#mypanel').fadeOut();});
-			$('#closemenu').click(function(e){$('#mypanel').fadeOut();});
+			$('#closemenu,#listview a').click(function(e){$('#mypanel').fadeOut();});
 		});
 		
 		
