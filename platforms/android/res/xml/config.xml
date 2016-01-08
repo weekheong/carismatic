@@ -9,6 +9,10 @@
         <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
     </feature>
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/drawable-ldpi/icon.png" />
+    <icon density="mdpi" src="res/drawable-mdpi/icon.png" />
+    <icon density="hdpi" src="res/drawable-hdpi/icon.png" />
+    <icon density="xhdpi" src="res/drawable-xhdpi/icon.png" />
     <name>Carismatic</name>
     <description>
         An application that connects car owners to car washers.
