@@ -150,7 +150,7 @@ var app = {
 			$('#closemenu,#listview a').click(function(e){$('#mypanel').fadeOut();});
 			if(profile_pic && $('.profile_picture').length == 0)
 			{
-				$('#profile_picture').addClass('profile_picture').width($('#profile_picture').height()).attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"');");
+				$('#profile_picture').addClass('profile_picture').height($('#profile_picture').width()).attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"');");
 			}
 		});
 		
