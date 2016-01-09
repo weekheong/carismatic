@@ -11,7 +11,7 @@
     <plugin name="cordova-plugin-whitelist" spec="1" />
   <preference name="android-build-tool" value="gradle" />
   <plugin name="phonegap-plugin-push" source="npm" version="1.2.3" />
-  <plugin name="Notification" value="org.apache.cordova.Notification"/>
+  <plugin name="Notification" value="cordova-plugin-dialogs" version="1.2.0"/>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
