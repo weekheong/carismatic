@@ -150,12 +150,31 @@
 			<div data-role="header" role="banner" class="ui-header ui-bar-inherit dashheader info">
 				<a href="#!" class="ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left  ui-corner-all menubtn">Menu</a>
 				
-				<h1 class="ui-title info" role="heading" aria-level="1" style="text-shadow:none;">Carismatic Settings</h1>
+				<h1 class="ui-title info" role="heading" aria-level="1" style="text-shadow:none;">Settings</h1>
 			
 				
 			</div>
 			<div class="ui-content" role="main">
 				
+				<h2>Account Settings</h2>
+				
+				<form id="form1" enctype="multipart/form-data" onsubmit="return false;">
+					<div class="ui-field-contain">
+						<label for="settings_photo">Photo:</label>
+						<input type="file" name="settings_photo" id="settings_photo" value="" data-clear-btn="true">
+					</div>
+					
+					<div class="ui-field-contain">
+						<label for="settings_password">Password:</label>
+						<input type="password" name="settings_password" id="settings_password" value="" data-clear-btn="true">
+					</div>
+					<div class="ui-field-contain">
+						<label for="settings_repassword">Password Confirm:</label>
+						<input type="password" name="settings_repassword" id="settings_repassword" value="" data-clear-btn="true">
+					</div>
+					
+					<button class="ui-shadow ui-btn ui-corner-all" id="btnsettings">Save Changes</button>
+				</form>
 			</div>
 		</div>	
 	</div>
