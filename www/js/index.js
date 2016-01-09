@@ -198,7 +198,7 @@ var app = {
 		$('button#btnsettings').click(
 		function(e){
 			try{
-				$.mobile.pageLoading(); 
+				$.mobile.showPageLoadingMsg(); 
 				userid = window.localStorage.getItem("userid");
 				if(userid){
 					$.ajax({
@@ -216,7 +216,7 @@ var app = {
 							
 							$('#login_script').html(request);
 						}
-						$.mobile.pageLoading( true );
+						$.mobile.hidePageLoadingMsg();
 					});
 				}
 			}
