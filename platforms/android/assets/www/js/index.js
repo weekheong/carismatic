@@ -152,7 +152,7 @@ var app = {
 			profile_pic = window.localStorage.getItem("profile_pic");
 			if(profile_pic && $('.profile_picture').length == 0)
 			{
-				$('#profile_picture').addClass('profile_picture').height($('#profile_picture').width()).attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"');");
+				$('#profile_picture').addClass('profile_picture').attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"') no-repeat center center;").height($('#profile_picture').width());
 			}
 		});
 		
