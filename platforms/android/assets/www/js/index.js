@@ -190,6 +190,7 @@ var app = {
 		$('button#btnsettings').click(
 		function(e){
 			try{
+				alert("TEST");
 				$.ajax({
 					url: ipaddress+'index.php/action/savechangessettings',  //Server script to process data
 					type: 'POST',
