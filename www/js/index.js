@@ -40,6 +40,8 @@ var app = {
     receivedEvent: function() {
 		
 		var userid = window.localStorage.getItem("userid");
+		var rights = window.localStorage.getItem("rights");
+		var profile_pic = window.localStorage.getItem("profile_pic");
 		if(userid)
 		{
 			$.mobile.pageContainer.pagecontainer("change", "#dashboard", { reverse:false,changeHash:false });
@@ -146,6 +148,10 @@ var app = {
 			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
 			$(document).click(function(e){$('#mypanel').fadeOut();});
 			$('#closemenu,#listview a').click(function(e){$('#mypanel').fadeOut();});
+			if(profile_pic && $('.profile_picture').length == 0)
+			{
+				$('#profile_picture').addClass('profile_picture').width($('#profile_picture').height()).attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"');");
+			}
 		});
 		
 		
