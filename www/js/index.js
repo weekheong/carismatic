@@ -190,13 +190,12 @@ var app = {
 		$('button#btnsettings').click(
 		function(e){
 			try{
-				alert("TEST");
 				$.ajax({
 					url: ipaddress+'index.php/action/savechangessettings',  //Server script to process data
 					type: 'POST',
 					// Form data
 					data: new FormData($('#form1')[0]),
-					error:function(e,s,err){alert(s+err);},
+					error:function(e,s,err){alert(s+err+ipaddress+'index.php/action/savechangessettings');},
 					//Options to tell jQuery not to process data or worry about content-type.
 					cache: false,
 					contentType: false,
