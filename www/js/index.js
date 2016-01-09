@@ -190,22 +190,25 @@ var app = {
 		$('button#btnsettings').click(
 		function(e){
 			try{
-				$.ajax({
-					url: ipaddress+'/index.php/action/savechangessettings',  //Server script to process data
-					type: 'POST',
-					// Form data
-					data: new FormData($('#form1')[0]),
-					error:function(e,s,err){alert(s+' '+err);},
-					//Options to tell jQuery not to process data or worry about content-type.
-					cache: false,
-					contentType: false,
-					processData: false
-				}).done(function(request){
-					if(request!=''){
-					
-						$('#login_script').html(request);
-					}
-				});
+				userid = window.localStorage.getItem("userid");
+				if(userid){
+					$.ajax({
+						url: ipaddress+'/index.php/action/savechangessettings/'+userid,  //Server script to process data
+						type: 'POST',
+						// Form data
+						data: new FormData($('#form1')[0]),
+						error:function(e,s,err){alert(s+' '+err);},
+						//Options to tell jQuery not to process data or worry about content-type.
+						cache: false,
+						contentType: false,
+						processData: false
+					}).done(function(request){
+						if(request!=''){
+						
+							$('#login_script').html(request);
+						}
+					});
+				}
 			}
 			catch(e){alert(e.message);}
 		}
