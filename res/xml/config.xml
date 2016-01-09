@@ -25,4 +25,5 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+	<plugin name="Notification" value="org.apache.cordova.Notification"/>
 </widget>
