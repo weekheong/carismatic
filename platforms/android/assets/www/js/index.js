@@ -148,6 +148,8 @@ var app = {
 			$('#mypanel').fadeIn().click(function(e){e.stopPropagation();});
 			$(document).click(function(e){$('#mypanel').fadeOut();});
 			$('#closemenu,#listview a').click(function(e){$('#mypanel').fadeOut();});
+	
+			profile_pic = window.localStorage.getItem("profile_pic");
 			if(profile_pic && $('.profile_picture').length == 0)
 			{
 				$('#profile_picture').addClass('profile_picture').height($('#profile_picture').width()).attr('style',"background:url('"+ipaddress+"/assets/uploads/profile"+profile_pic+"');");
