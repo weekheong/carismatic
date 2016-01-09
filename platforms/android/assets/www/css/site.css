@@ -36,6 +36,10 @@
     background-color: transparent;
 	background:transparent;
     color: #FFF;}
+	.ui-field-contain.carfield input,
+	.ui-field-contain.carfield  .ui-body-inherit{color:#222;}
+	.ui-field-contain.carfield{border-bottom-color:#FFCACA;}
+	.ui-field-contain.carfield label{color:#151D31;}
 	
 	#form1 input{color:#000}
 	
