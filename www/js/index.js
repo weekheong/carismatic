@@ -16,7 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var ipaddress = "http://42.61.224.110:8080/carismatic";
+//var ipaddress = "http://42.61.224.110:8080/carismatic";
+var ipaddress = "http://carismatic.net23.net";
 var app = {
     // Application Constructor
     initialize: function() {
