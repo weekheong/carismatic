@@ -95,8 +95,7 @@ var app = {
 							if(request){
 								var minZoomLevel = 12;
 
-								var element = document.getElementById('geolocation');
-								element.innerHTML = request;
+								$('#geolocation').html(request);
 							}
 						});
 					}
