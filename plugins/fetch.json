@@ -30,5 +30,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "plugin.google.maps": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phonegap-googlemaps-plugin/cordova-plugin-googlemaps",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
